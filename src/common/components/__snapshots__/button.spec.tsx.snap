@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button tests should render a happy path button with simple props 1`] = `
+<DocumentFragment>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+    data-testid="mui-button"
+    tabindex="0"
+    type="submit"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      Button
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
+</DocumentFragment>
+`;

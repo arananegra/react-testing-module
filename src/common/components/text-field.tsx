@@ -1,13 +1,12 @@
 import * as React from 'react';
-import MaterialTextField, {
-  TextFieldProps as MaterialTextFieldProps,
-} from '@material-ui/core/TextField';
-import { Overwrite } from '@material-ui/types';
+import MaterialTextField, { TextFieldProps as MaterialTextFieldProps } from '@material-ui/core/TextField';
+//Removed due to tests conflicts
+//import { Overwrite } from '@material-ui/types';
 
 export interface TextFieldProps {
   name: string;
   label: string;
-  value;
+  value?: string;
   onChange: (field: string, value, event?) => void;
   error?: string;
   type?: string;
@@ -15,9 +14,7 @@ export interface TextFieldProps {
   className?: string;
 }
 
-export const TextField: React.StatelessComponent<
-  Overwrite<MaterialTextFieldProps, TextFieldProps>
-> = props => {
+export const TextField: React.FC<TextFieldProps> = props => {
   const {
     name,
     label,
@@ -50,6 +47,9 @@ export const TextField: React.StatelessComponent<
       value={value}
       type={type}
       onChange={handleChange}
+      inputProps={
+        { ['data-testid']: 'mui-textfield' }
+      }
       onBlur={handleBlur}
       error={hasError}
       helperText={hasError && error}
