@@ -8,7 +8,9 @@
     "clean": "rimraf dist",
     "build": "npm run clean && webpack --config ./config/webpack/prod.js",
     "test": "jest -c ./config/test/jest.json --verbose",
-    "test:watch": "jest -c ./config/test/jest.json --verbose --watchAll -i"
+    "test:watch": "jest -c ./config/test/jest.json --verbose --watchAll -i",
+    "pretest:coverage": "rimraf coverage",
+    "test:coverage": "jest -c ./config/test/jest.coverage.json --verbose --coverage"
   },
   "author": "Lemoncode",
   "license": "MIT",

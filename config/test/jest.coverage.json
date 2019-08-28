@@ -1,0 +1,10 @@
+{
+  "rootDir": "../../",
+  "preset": "ts-jest",
+  "restoreMocks": true,
+  "collectCoverage": true,
+  "coverageReporters": [
+    "text",
+    "html"
+  ]
+}

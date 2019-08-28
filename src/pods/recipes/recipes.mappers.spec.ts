@@ -1,4 +1,3 @@
-import * as apiModel from './api/recipes.api-model';
 import * as vm from './recipes.view-model';
 import { mapRecipeFromApiToVm } from './recipes.mappers';
 

@@ -19,6 +19,7 @@ export const Button: React.FunctionComponent<Props> = props => {
 
   return (
     <MaterialButton
+      data-testid="mui-button"
       onClick={handleClick}
       variant="contained"
       color="primary"
