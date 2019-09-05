@@ -38,7 +38,7 @@ export const TableComponent: React.FunctionComponent<Props> = props => {
               className={classes.row}
               onClick={handleNavigation(recipe.id)}
             >
-              <TableCell component="th" scope="row">
+              <TableCell data-testid="table-cell" component="th" scope="row">
                 {recipe.name}
               </TableCell>
               <TableCell align="right">

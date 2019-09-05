@@ -20,7 +20,7 @@ const InnerRecipesContainer: React.FunctionComponent<InnerProps> = props => {
     loadRecipes();
   }, []);
 
-  return <RecipesComponent recipes={filteredRecipes} onSearch={handleFilter} />;
+  return <RecipesComponent data-testid="recipes-container" recipes={filteredRecipes} onSearch={handleFilter} />;
 };
 
 const mapStateToProps = (state: State) => ({
@@ -28,7 +28,7 @@ const mapStateToProps = (state: State) => ({
 });
 
 const mapDispatchtoProps = (dispatch: Dispatch) => ({
-  loadRecipes: () => dispatch(getRecipesRequest()),
+  loadRecipes: () => {dispatch(getRecipesRequest())},
 });
 
 export const RecipesContainer = connect(
