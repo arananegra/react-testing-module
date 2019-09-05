@@ -4,7 +4,6 @@ exports[`Button tests should render a happy path input with simple props 1`] = `
 <DocumentFragment>
   <div
     class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
-    data-testid="external-mui-input"
   >
     <label
       class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"

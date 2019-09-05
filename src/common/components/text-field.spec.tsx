@@ -49,10 +49,11 @@ describe('Button tests', () => {
       value: '',
       onBlur: jest.fn(),
       onChange: jest.fn(),
+      error: 'Error'
     };
 
     // Act
-    const { getByTestId } = render(<TextField {...props} />);
+    const { getByTestId, asFragment } = render(<TextField {...props} />);
     const textFieldElement = getByTestId('mui-textfield') as HTMLInputElement;
     fireEvent.blur(textFieldElement);
     //Assert
