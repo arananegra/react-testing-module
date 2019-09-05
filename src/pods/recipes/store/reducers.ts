@@ -21,10 +21,7 @@ export const recipesPodReducer = (
   return state;
 };
 
-const handleUpdateRecipes = (
-  state: RecipesPodState,
-  recipes: Recipe[]
-): RecipesPodState => ({
+const handleUpdateRecipes = (state: RecipesPodState, recipes: Recipe[]): RecipesPodState => ({
   ...state,
   recipes,
 });

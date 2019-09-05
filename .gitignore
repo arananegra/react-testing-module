@@ -8,3 +8,4 @@ typings/
 *.log
 package-lock.json
 coverage/
+.awcache

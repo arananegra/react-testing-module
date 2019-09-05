@@ -6,7 +6,7 @@ import { act, renderHook } from '@testing-library/react-hooks';
 describe('useRecipes tests', () => {
   it('should filter recipes by valid string search', () => {
     // Arrange
-    const recipesCollection = [...mockRecipes];
+    const recipesCollection = mockRecipes;
     const resultRecipe = recipesCollection[2];
     // Act
     const { result } = renderHook(() => useRecipes(recipesCollection));
