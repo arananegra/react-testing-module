@@ -5,7 +5,7 @@ import { render } from '@testing-library/react';
 import { getRecipesRequest, recipesPodReducer } from './store';
 import { RecipesContainer } from './recipes.container';
 import { mockRecipes } from './api/recipes.mock-data';
-import * as actions from './store/actions';
+import * as actions from './store';
 
 const renderWithRedux = (
   component,
@@ -60,16 +60,16 @@ describe('recipes container tests', () => {
         recipes: [],
       },
     };
-    jest.spyOn(actions, 'getRecipesRequest');
+    //jest.spyOn(actions, 'getRecipesRequest');
 
     const getRecipesRequest = jest.spyOn(actions, 'getRecipesRequest');
     // Act
-    const { queryAllByTestId } = renderWithRedux(<RecipesContainer/>, {
+    const {} = renderWithRedux(<RecipesContainer/>, {
       initialState,
       reducer: recipesPodReducer,
     });
 
     // Assert
-    expect(getRecipesRequest).toHaveBeenCalled();
+    expect(getRecipesRequest).toBeCalledTimes(1);
   });
 });

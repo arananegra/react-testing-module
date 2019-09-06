@@ -16,9 +16,9 @@ interface InnerProps {
 const InnerRecipesContainer: React.FunctionComponent<InnerProps> = props => {
   const { recipes, loadRecipes } = props;
   const { filteredRecipes, handleFilter } = useRecipes(recipes);
-  React.useEffect(() => {
-    loadRecipes();
-  }, []);
+  React.useEffect(
+    loadRecipes
+  , []);
 
   return <RecipesComponent data-testid="recipes-container" recipes={filteredRecipes} onSearch={handleFilter} />;
 };
