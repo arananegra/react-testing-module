@@ -21,6 +21,7 @@ export const SearchComponent: React.FunctionComponent<Props> = props => {
     <TextField
       className={classes.textField}
       label="Search"
+      data-testid={'search-component'}
       name="search"
       value={value}
       onChange={handleChange}

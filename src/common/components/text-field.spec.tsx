@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 import { TextField } from './text-field';
-import { BaseTextFieldProps, TextFieldProps } from '@material-ui/core/TextField';
 
 describe('Button tests', () => {
   it('should render a happy path input with simple props', () => {
@@ -10,7 +9,7 @@ describe('Button tests', () => {
       label: 'text field',
       name: 'input-name',
       onChange: jest.fn(),
-      value: 'value'
+      value: 'value',
     };
 
     // Act
@@ -49,11 +48,11 @@ describe('Button tests', () => {
       value: '',
       onBlur: jest.fn(),
       onChange: jest.fn(),
-      error: 'Error'
+      error: 'Error',
     };
 
     // Act
-    const { getByTestId, asFragment } = render(<TextField {...props} />);
+    const { getByTestId } = render(<TextField {...props} />);
     const textFieldElement = getByTestId('mui-textfield') as HTMLInputElement;
     fireEvent.blur(textFieldElement);
     //Assert
