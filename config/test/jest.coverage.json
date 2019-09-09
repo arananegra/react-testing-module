@@ -2,6 +2,21 @@
   "rootDir": "../../",
   "preset": "ts-jest",
   "restoreMocks": true,
+  "transformIgnorePatterns": [
+    "<rootDir>/node_modules/"
+  ],
+  "moduleNameMapper": {
+    "^common/(.*)$": "<rootDir>/src/common/$1",
+    "^core/(.*)$": "<rootDir>/src/core/$1",
+    "^layout/(.*)$": "<rootDir>/src/layout/$1",
+    "^pods/(.*)$": "<rootDir>/src/pods/$1",
+    "^scenes/(.*)$": "<rootDir>/src/scenes/$1",
+    "^.+\\.(s?css|less)$": "<rootDir>/config/test/fileMock.js",
+    "\\.(jpg|jpeg|png|svg)$": "<rootDir>/config/test/fileMock.js"
+  },
+  "modulePaths": [
+    "<rootDir>"
+  ],
   "collectCoverage": true,
   "coverageReporters": [
     "text",

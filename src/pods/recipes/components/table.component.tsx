@@ -7,7 +7,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { Recipe } from '../recipes.view-model';
 import { useStyles } from './table.styles';
-import { flatItems } from 'common/helpers';
+import { flatItems } from 'common/helpers/flat-items';
 import { history, linkRoutes } from 'core/router';
 
 interface Props {
