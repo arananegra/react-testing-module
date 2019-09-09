@@ -14,7 +14,7 @@ $ npm install
 
 ## Features of this project
 
-All the basic examples are runnable by:
+- All the basic examples are runnable by:
 ```sh
 $ npm test
 ```
@@ -27,11 +27,11 @@ $ npm run test:watch
 
 ## Some extra points:
 
-Added test coverage: 
+- Added test coverage: 
 
 ```sh
 $ npm run test:coverage
 ```
 
-Added circle-ci and travis-ci integration.
+- Added circle-ci and travis-ci integration (as it is showed by the badges)
 
