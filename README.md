@@ -14,7 +14,7 @@ $ npm install
 
 ## Features of this project
 
-- All the basic examples are runnable by:
+- All the basic and extra examples are runnable by:
 ```sh
 $ npm test
 ```
@@ -25,13 +25,17 @@ or
 $ npm run test:watch
 ```
 
-## Some extra points:
+## Warning:
 
-- Added test coverage: 
+- There is a warning related to Material UI when rendering the table component
 
 ```sh
-$ npm run test:coverage
+ console.error node_modules/react-dom/cjs/react-dom.development.js:545
+      Warning: validateDOMNesting(...): <td> cannot appear as a child of <div>.
+          in td (created by ForwardRef(TableCell))
+          in ForwardRef(TableCell) (created by WithStyles(ForwardRef(TableCell)))
+          in WithStyles(ForwardRef(TableCell))
+
 ```
 
-- Added circle-ci and travis-ci integration (as it is showed by the badges)
 
