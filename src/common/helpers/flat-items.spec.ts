@@ -8,4 +8,11 @@ describe('Flat items tests', () => {
     expect(result).not.toBeUndefined();
     expect(result).toEqual(expectedResult);
   });
+
+  it('should return empty string when array is empty', () => {
+    const arrayToFlatten = [''];
+    const result = flatItems(arrayToFlatten, ',');
+    expect(result).not.toBeUndefined();
+    expect(result).toEqual('');
+  });
 });

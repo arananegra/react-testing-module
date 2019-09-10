@@ -6,23 +6,7 @@ import { TableCell } from '@material-ui/core';
 import { history } from 'core/router';
 
 describe('Table component tests', () => {
-  it('should render a happy table with simple props', () => {
-    // Arrange
-    const props = {
-      recipes: mockRecipes,
-    };
-
-    // Act
-    const { getByTestId, asFragment } = render(<TableComponent {...props} />);
-    const tableElement = getByTestId('mui-table');
-    //Assert
-
-    expect(tableElement).not.toBeUndefined();
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-
-  it('should call handleNavigation when row is clicked', () => {
+  it('should render table and call handleNavigation when row is clicked', () => {
     // Arrange
     const props = {
       recipes: mockRecipes,
@@ -30,12 +14,14 @@ describe('Table component tests', () => {
     const pushSpy = jest.spyOn(history, 'push');
 
     // Act
-    render(<TableComponent {...props} />);
+    const { getByTestId, asFragment } = render(<TableComponent {...props} />);
     const { getAllByTestId } = render(<TableCell/>);
+    const tableElement = getByTestId('mui-table');
     const tableCellComponent = getAllByTestId('table-cell');
     fireEvent.click(tableCellComponent[0]);
-    //Assert
 
+    //Assert
+    expect(tableElement).not.toBeUndefined();
     expect(tableCellComponent).not.toBeUndefined();
     expect(pushSpy).toHaveBeenCalled();
   });
