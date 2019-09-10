@@ -4,10 +4,10 @@ exports[`Table component tests should render table and call handleNavigation whe
 <DocumentFragment>
   <div
     class="MuiPaper-root MuiPaper-elevation1 makeStyles-root-1 MuiPaper-rounded"
-    data-testid="mui-table"
   >
     <table
       class="MuiTable-root makeStyles-table-2"
+      data-testid="mui-table"
     >
       <thead
         class="MuiTableHead-root"
