@@ -14,7 +14,7 @@ $ npm install
 
 ## Features of this project
 
-- All the basic and extra examples are runnable by:
+- All the basic and extra points are runnable by:
 ```sh
 $ npm test
 ```
@@ -27,7 +27,7 @@ $ npm run test:watch
 
 ## Warning:
 
-- There is a warning related to Material UI when rendering the table component
+- There is a warning related to Material UI when rendering the table component but it does not affect the test
 
 ```sh
  console.error node_modules/react-dom/cjs/react-dom.development.js:545
