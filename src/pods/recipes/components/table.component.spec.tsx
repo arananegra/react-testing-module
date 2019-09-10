@@ -21,7 +21,6 @@ describe('Table component tests', () => {
     fireEvent.click(tableCellComponent[0]);
 
     //Assert
-    expect(asFragment()).toMatchSnapshot();
     expect(tableElement).not.toBeUndefined();
     expect(tableCellComponent).not.toBeUndefined();
     expect(pushSpy).toHaveBeenCalled();
