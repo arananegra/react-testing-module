@@ -23,8 +23,8 @@ export const TableComponent: React.FunctionComponent<Props> = props => {
   };
 
   return (
-    <Paper className={classes.root}>
-      <Table data-testid="mui-table" className={classes.table}>
+    <Paper data-testid="mui-table" className={classes.root}>
+      <Table className={classes.table}>
         <TableHead>
           <TableRow>
             <TableCell>Name</TableCell>
