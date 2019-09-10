@@ -1,6 +1,6 @@
 import { Recipe } from './recipes.view-model';
 
-export const filterRecipes = (recipes: Recipe[], searchedValue: string) => {
+export const filterRecipes = (recipes: Recipe[], searchedValue: string): Recipe[] => {
   const ingredients = getSearchedIngredients(searchedValue);
 
   return searchedValue === ''
